@@ -39,16 +39,16 @@ export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [cartOpen, setCartOpen] = useState(false)
   const [listOpen, setListOpen] = useState(false)
-  const [cartItems, setCartItems] = useState<CartItem[]>(SAMPLE_ITEMS)
+  const [cartItems, _setCartItems] = useState<CartItem[]>(SAMPLE_ITEMS)
   const [myList, setMyList] = useState<CartItem[]>([])
-  const [addedId, setAddedId] = useState<number | null>(null)
+  const [_addedId, setAddedId] = useState<number | null>(null)
 
   const totalItems = cartItems.reduce((s, i) => s + i.qty, 0)
   const totalPrice = cartItems.reduce((s, i) => s + i.price * i.qty, 0)
 
-  function removeItem(id: number) {
-    setCartItems(prev => prev.filter(i => i.id !== id))
-  }
+  // function removeItem(id: number) {
+  //   setCartItems(prev => prev.filter(i => i.id !== id))
+  // }
 
   function removeFromList(id: number) {
     setMyList(prev => prev.filter(i => i.id !== id))
