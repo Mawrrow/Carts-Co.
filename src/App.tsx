@@ -197,7 +197,7 @@ export default function App() {
         {/* Hero Banner */}
         <section className="hero-banner">
           <div className="hero-text">
-            <h1 className="hero-headline">Smart Shopping,<br />Simplified.</h1>
+            <h1 className="hero-headline">Get your Cart<br />Together.</h1>
             <p className="hero-sub">Scan, navigate & checkout without the wait.</p>
             <button className="hero-cta">Start Shopping</button>
           </div>
